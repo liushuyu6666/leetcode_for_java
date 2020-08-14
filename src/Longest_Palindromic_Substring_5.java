@@ -9,6 +9,7 @@ public class Longest_Palindromic_Substring_5 {
         int[] maxWing = {0, 0}; // the final range bin
         int palindromeLength = 0, length;
         int[] evenWing; int[] oddWing;
+        // the time O(n^2) because
         for(c = 0; c < s.length(); c++){
             evenWing = moveRange(c, c+1, s);
             oddWing = moveRange(c, c, s);

@@ -24,10 +24,12 @@ public class Longest_Substring_Without_Repeating_Characters_3 {
         return max_length;
     }
 
+    // in the optimizer, they record the last(right) index of each character to check
+    // if this character is in the window
     public int lengthOfLongestSubstring_optimize(String s){
         if(s.length() < 2) return s.length();
         int max_length = 1;
-        Map<Character, Integer> last_character = new HashMap<>();
+        Map<Character, Integer> last_character = new HashMap<>();//tips
         // i is the initial point of sliding window
         // j is the end point (exclusive)
         for(int i = 0, j = 0; j < s.length(); j++){
@@ -36,7 +38,7 @@ public class Longest_Substring_Without_Repeating_Characters_3 {
                 i = Math.max(last_character.get(s.charAt(j)) + 1, i);
             }
             max_length = Math.max(max_length, j - i + 1);
-            last_character.put(s.charAt(j), j);
+            last_character.put(s.charAt(j), j);// update the last character
         }
         return max_length;
     }
