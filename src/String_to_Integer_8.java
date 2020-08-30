@@ -1,6 +1,7 @@
 public class String_to_Integer_8 {
     public int myAtoi(String str){
-        if (str == "") return 0;
+        if (str == "")
+            return 0;
         boolean haventMeetDig = true;
         int symbol = 1;
         int INT_MAX = (int)(Math.pow(2, 31) - 1);

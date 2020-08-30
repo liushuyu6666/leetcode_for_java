@@ -27,6 +27,7 @@ public class Container_With_Most_Water_11 {
     public static void main(String[] args) {
         Container_With_Most_Water_11 cwmw = new Container_With_Most_Water_11();
         int[] a =  {1, 8, 6, 2, 5, 4, 8, 3, 7};
+        System.out.println(cwmw.maxArea(a));
         System.out.println(cwmw.OptmMaxArea(a));
     }
 }
