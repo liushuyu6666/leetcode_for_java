@@ -9,6 +9,7 @@ Title | Time | memory
 5 | 24ms 79 | 38mb 73
 17 | 6ms 26 | 40mb 66
 18 | 76ms 10 | 41mb 28
+19 | 0ms 100 | 38mb 42
 
 
 ## 15. 3Sum
