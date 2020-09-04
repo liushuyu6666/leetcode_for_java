@@ -10,6 +10,7 @@ Title | Time | memory
 17 | 6ms 26 | 40mb 66
 18 | 76ms 10 | 41mb 28
 19 | 0ms 100 | 38mb 42
+20 | 2ms 52  | 38mb 42
 
 
 ## 15. 3Sum
@@ -32,4 +33,31 @@ List.size()
 3.
 ```java
 List.get()
+```
+
+## 20. Valid Parentheses
+### data structure
+Stack:
+1. 
+```java
+Stack goodOne = new Stack()
+```
+2. 
+```java
+goodOne.empty() // check if goodOne is empty, return boolean.
+```
+3.
+```java
+goodOne.pop() // return Object
+```
+4.
+```java
+goodOne.push(newObject) // return Object
+```
+
+### methods
+1.  
+convert Object to String and to char
+```java
+Object.toString().toCharArray()
 ```
