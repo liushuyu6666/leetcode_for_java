@@ -13,13 +13,26 @@ Title | Time | memory
 20 | 2ms 52  | 38mb 42
 21 | 0ms 100 | 39mb 52
 
+## 1. Two Sum
+### data structure
+Primary type's array:
+```java
+int[] arr = {1, 2, 3}; // create and initialize the array
+arr.length; // get the length of the arr
+```
+
+
 
 ## 15. 3Sum
 ### algorithm
 Fix i and move j, k to find nums[i] + nums[j] + nums[k] = 0
+
+
 ## 16. 3Sum Closest
 ### mistakes
 Shouldn't initialize result as MAX_INT or MIN_INT or it will jump out of border when calculate abs(result - target)  
+
+
 ## 17. Letter Combinations of a Phone Number
 ### data structure
 List:
