@@ -2,32 +2,26 @@ import java.util.List;
 
 public class Add_Two_Numbers_2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        // cursor for l1
-        ListNode p = l1;
-        // cursor for l2
-        ListNode q = l2;
-        // result ListNode
-        ListNode r = new ListNode();
-        // cur points to the initial addr of r
-        ListNode cur = r;
-        // values for each node of l1, l2
-        int val1=0, val2=0;
         int carry = 0;
-        int sum = 0;
-        while(p != null || q != null){
-            val1 = (p == null)? 0: p.val;
-            val2 = (q == null)? 0: q.val;
-            sum = val1 + val2 + carry;
-            carry = (int) (sum / 10);
-            cur.next = new ListNode(sum%10);
+        int val1, val2;
+        /** tips: when we call new ListNode(), a ListNode(val=0, next=null) is created, so
+         * here head.val and head.next is accessible*/
+        ListNode head = new ListNode();
+        ListNode cur = head;
+        while(l1 != null || l2 != null){
+            val1 = (l1 == null)?0:l1.val;
+            val2 = (l2 == null)?0:l2.val;
+            cur.next = new ListNode((carry + val1 + val2) % 10, null);
+            carry = (int)((carry + val1 + val2) / 10);
             cur = cur.next;
-            if (p != null) p = p.next;
-            if (q != null) q = q.next;
+            l1 = (l1 == null) ? l1 : l1.next;
+            l2 = (l2 == null) ? l2 : l2.next;
         }
-        if (carry > 0){
-            cur.next = new ListNode(carry);
+        if(carry != 0){
+            cur.next =
+                    new ListNode(carry, null);
         }
-        return r.next;
+        return head.next;
     }
 
     public static void main(String[] args){
