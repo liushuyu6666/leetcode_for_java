@@ -21,7 +21,16 @@ int[] arr = {1, 2, 3}; // create and initialize the array
 arr.length; // get the length of the arr
 ```
 
-
+## 2. Add Two Numbers 2
+### data structure
+1. new ListNode():  
+```java
+/** tips: when we call new ListNode(), a ListNode(val=0, next=null) is created, so
+         * here head.val and head.next is accessible*/
+        ListNode head = new ListNode();
+```
+2. jump over the first node:  
+give up the first node and return head.next
 
 ## 15. 3Sum
 ### algorithm
